@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //運算敘述句
+
+      var a = 10; //指定運算,a=10
+      a = 20; //指定運算, a=20
+
+      a = a + 10; //加法指定運算，a=30
+      a += 10; //加法指定運算，動作相當於a=a+10,a=40
+      a -= 10; //減法指定運算，動作相當於a=a-10,a=30
+      a *= 10; //乘法指定運算，動作相當於a=a*10,a=300
+      a /= 10; //除法指定運算，動作相當於a=a/10,a=30
+
+      a %= 4; //除法取餘數指定運算，動作相當於a=a%4,a=2
+
+      //以下四種寫法都是累加1的意思
+      a = a + 1;
+      a += 1;
+      a++;
+      ++a;
+      //目前a=6
+
+      document.write("a=" + a);
+
+      document.write("<hr>");
+
+      // 兩數交換
+      // 請宣告兩個變數分別為x與y，請給x,y任意的數值，程式內容請把x與y的值對調。
+      // 但不可以再宣告新的變數，並輸入對調後的結果。
+      var x = 2,
+        y = 8;
+
+      x = x + y; //x=10 y=8
+      y = x - y; //x=10, y=2
+      x = x - y; //x=8, y=2
+
+      document.write("x=" + x + ", y=" + y); //題目不可變動
+
+      document.write("<hr>");
+      //////////////////////練習題////////////////////////////////////////
+      var x = 520,
+        y = 1314;
+
+      x = x + y; //
+      y = x - y; //
+      x = x - y; //
+
+      document.write("x=" + x + ", y=" + y); //題目不可變動
+
+      document.write("<hr>");
+
+      /////////////////////////////////////////
+      //不同資料型態在算術運算的結果
+      //1.* / %
+      //2.+ -
+
+      document.write(3 + 2);
+      document.write("<br>");
+      document.write("3" + "2");
+      document.write("<br>");
+      document.write("3" + 2);
+      document.write("<br>");
+      document.write(3 + "2");
+      document.write("<br>");
+      document.write("3" - 2);
+      document.write("<br>");
+      document.write("3" * 2);
+      document.write("<br>");
+      document.write("3" / 2);
+      document.write("<br>");
+
+      document.write("a" - 2);
+      document.write("<br>");
+      document.write("3a" - 2);
+      document.write("<br>");
+      document.write("a3" - 2);
+      document.write("<br>");
+
+      var m = "10";
+      document.write(m + 2);
+      document.write("<br>");
+      document.write(m - 0 + 2);
+      document.write("<br>");
+
+      document.write("<hr>");
+
+      //////////////////////////////
+
+      //   var n = prompt("請輸入一個整數數值"); //因為prompt輸入，會被預設成文字
+      //   document.write(n - 0 + 10); //所以運用特性，n-0就能變成數值，再加10。
+
+      //   document.write("<hr>");
+
+      /* // 兩數交換
+      // 請宣告兩個變數分別為o與p，請給o,p任意的數值，程式內容請把o與p的值對調。
+      // 但不可以再宣告新的變數，並輸入對調後的結果。
+
+      var o = prompt("請輸入o值"),
+        p = prompt("請輸入p值");
+
+      o = o - 0 + (y - 0);
+      p = o - p;
+      o = o - p;
+      document.write("x=" + x + ", y=" + y); //題目不可變動
+
+      document.write("<hr>"); */
+
+      ///////////////////////////////////////////////////
+
+      //使用parseInt()來做資料型態轉換
+      //Integer整數型態
+      
+      document.write(parseInt(m)+2);
+      document.write("<br>");
+
+      
+
+
+
+
+    </script>
+  </body>
+</html>

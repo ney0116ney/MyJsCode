@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      //var n1=*
+      //var n2=**
+      //var n3=***
+
+      document.write("*<br>");
+      document.write("**<br>");
+      document.write("***<br>");
+      document.write("****<br>");
+      document.write("*****<br>");
+
+      document.write("<hr>");
+
+
+
+      for (var i = 1; i <= 1; i++) {
+        document.write("*");
+      }
+      document.write("<br>");
+
+      for (var i = 1; i <= 2; i++) {
+        document.write("*");
+      }
+      document.write("<br>");
+
+      for (var i = 1; i <= 3; i++) {
+        document.write("*");
+      }
+      document.write("<br>");
+
+      for (var i = 1; i <= 4; i++) {
+        document.write("*");
+      }
+      document.write("<br>");
+
+      for (var i = 1; i <= 5; i++) {
+        document.write("*");
+      }
+      document.write("<br>");
+
+      //統整為下方程式
+      //EX: 最下排為50個*
+
+      for (var j = 1; j <= 50; j++) {
+            for (var i = 1; i <= j; i++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+
+      document.write("<hr>")  
+
+
+
+      document.write("<hr>");
+      ////////////////////////////////////////
+
+      //不可用巢狀迴圈，只能用一個迴圈
+      var a ="" ;  //a的箱子是空字串
+
+      //輸入最下排要顯示到15個*
+      for (var j = 1; j <= 15; j++) {
+            a = a + "*";
+            document.write(a+"<br>");
+        }
+
+
+    </script>
+  </body>
+</html>

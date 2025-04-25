@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //區分等第
+      //90分以上為優等, 80~89分為甲等, 70~79分為乙等, 60~69分為丙等, 60分以下為丁等
+      //輸出範例:
+      //S001-王小明-優等
+      //S002-王大明-甲等
+      //S003-王中明-丁等
+
+      //STEP1: 宣告三個陣列，分別為學號、姓名、成績
+
+      var arrStudentNo = ["S001","S002","S003","S004","S005", "S006","S007","S008","S009","S010",];
+      var arrStudentName = ["王小明","王大明","王中明","王右明","王左明","王上明","王下明", "張三","李四","王五",];
+      var arrStudentScore = [92, 87, 56, 68, 85, 83, 77, 71, 85, 93];
+
+      //可以一個一個寫，但是不建議這樣做
+      //這樣寫會很麻煩，當資料量多的時候就會很麻煩
+      document.write("S001-王小明-優等<br>");
+      document.write("S002-王大明-甲等<br>");
+      document.write("S003-王中明-丁等<br>");
+      document.write("S004-王右明-丙等<br>");
+      document.write("S005-王左明-甲等<br>");
+      document.write("S006-王上明-甲等<br>");
+      document.write("S007-王下明-乙等<br>");
+      document.write("S008-張三-乙等<br>");
+      document.write("S009-李四-甲等<br>");
+      document.write("S010-王五-優等<br>");
+
+      document.write("<hr>");
+
+      //STEP2: 用for迴圈讀取陣列的值，並用if判斷成績的等第
+      //STEP3: 用document.write()印出學號、姓名、成績的等第
+
+      //AI的寫法
+      /*  for(  var i=0; i < arrStudentNo.length; i++){
+            var deptNo = arrStudentNo[i];
+            var deptName = arrStudentName[i];
+            var deptScore = arrStudentScore[i];
+            var grade = ""; //等第
+
+            if (deptScore >= 90) {
+                grade = "優等";
+            } else if (deptScore >= 80) {
+                grade = "甲等";
+            } else if (deptScore >= 70) {
+                grade = "乙等";
+            } else if (deptScore >= 60) {
+                grade = "丙等";
+            } else {
+                grade = "丁等";
+            }
+            document.write(`${deptNo}-${deptName}-${grade}<br>`);
+
+        }*/
+
+      //老師的寫法
+
+      // var level = "";
+      // for (var i = 0; i < arrStudentNo.length; i++) {
+
+      //     if (arrStudentScore[i] >= 90)
+      //         level = "優等";
+      //     else if (arrStudentScore[i] >= 80)
+      //         level = "甲等";
+      //     else if (arrStudentScore[i] >= 70)
+      //         level = "乙等";
+      //     else if (arrStudentScore[i] >= 60)
+      //         level = "丙等";
+      //     else
+      //         level = "丁等";
+
+      //     document.write(`${arrStudentNo[i]}-${arrStudentName[i]}-${level}<br>`);
+      // }
+
+      //老師提供優化寫法
+        var arrLevel = ["丁等", "丁等", "丁等", "丁等", "丁等", "丁等", "丙等", "乙等", "甲等", "優等", "優等"];
+        //var arrLevel = ["優等","優等", "甲等", "乙等", "丙等", "丁等", "丁等", "丁等", "丁等", "丁等", "丁等"];
+        var index = 0;
+        for (var i = 0; i < arrStudentNo.length; i++) {
+            index = parseInt(arrStudentScore[i] / 10);
+            document.write(`${arrStudentNo[i]}-${arrStudentName[i]}-${arrLevel[index]}<br>`);
+        }
+
+        //上面的宣告等第arrLevel 從丁等寫到優等的用意是因為用了parseInt()的關係，
+        //除以10就可以分配到丁等、丙等、乙等、甲等、優等的陣列中，
+        //如果是從優等寫到丁等的話，
+        //就要用arrLevel[10-index]來取得等第，這樣就會變成優等、甲等、乙等、丙等、丁等的陣列了。
+
+    </script>
+  </body>
+</html>

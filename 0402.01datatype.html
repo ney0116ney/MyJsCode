@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //資料型態Data Type
+      //在JS裡只有三種資料型態
+      //1.數值(Number)
+      //2.字串(String)
+      //3.布林(Boolean)
+
+      var a = "abc"; //string //宣告及初始化
+      var b = 123; //number
+      var c = true; //boolean
+
+      a = 456; //指定運算值(賦值)
+
+      document.write(a);
+      document.write(b);
+      document.write(c);
+      document.write("<hr>");
+
+      document.write(typeof a);
+      document.write("<hr>");
+      document.write(typeof b);
+      document.write("<hr>");
+      document.write(typeof c);
+      document.write("<hr>");
+
+      document.write("a=" + a);
+      document.write(", b=" + b);
+      document.write(", c=" + c);
+      document.write("<hr>");
+
+      ///////////////////////////////////////
+
+      // 兩數交換
+      // 請宣告兩變數分別為x與y，請給x,y任意的數值，程式內容請把x與y的值對調。
+      // 並輸入對調後的結果。
+
+      var x= 50, y=100; //出題範例數字，不能改
+
+      var z=x; //x=50, y=100, z=50
+      x=y; //x=100,y=100,z=50
+      y=z; //x=100,y=50,z=50
+
+
+      document.write("x="+x+", y="+y) //出題題目，不能改
+
+      document.write("<hr>");
+
+
+
+
+
+      var apple=20, orange=5; //出題範例數字，不能改
+
+      var cherry=orange;//c=5 o=5 a=20
+      orange=apple; //c=5 o=20 a=20
+      apple = cherry;//c=5 o=20 a=5
+
+      document.write("apple="+apple+", orange="+orange) //出題題目，不能改
+
+
+
+    </script>
+  </body>
+</html>

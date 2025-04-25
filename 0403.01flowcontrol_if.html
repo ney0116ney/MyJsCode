@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* if敘述句...用於流程控制
+語法"
+
+if(條件){
+條件成立時要執行的程式
+要執行的程式可以不只一行
+}
+ */
+
+      //   var s = 60;
+
+      //   if (s < 60) {
+      //     document.write("s的值小於60");
+      //   }
+
+      //   if (s > 60) {
+      //     document.write("s的值大於60");
+      //   }
+
+      //   if (s == 60) {
+      //     document.write("s的值等於60");
+      //   }
+
+      //   if (s == "60") {
+      //     document.write("s的值等於60");
+      //   }
+
+      //   document.write("<hr>");
+
+      //   if (s >= 60) {
+      //     document.write("s的值大於等於60");
+      //   }
+
+      document.write("<hr>");
+      ///////////////////////////////////
+
+      //   1.信用卡付款 2.現金付款 3.轉帳付款 4.Line pay 5.貨到付款
+
+      var payType = prompt(
+        "請選擇付款方式,1.信用卡付款 2.現金付款 3.轉帳付款 4.Line Pay 5.貨到付款"
+      );
+
+      payType = parseInt(payType);
+
+      //如果輸入的不是數字
+      //   if(isNaN(payType)){
+      //     document.write("請輸入1-5的數字")
+      //   }
+
+      if (payType == 1) {
+        document.write(
+          "信用卡付款，請卡號填進刷卡單表格，並回傳至Email:shopping@gmail.com"
+        );
+      }
+
+      if (payType == 2) {
+        document.write("現金付款，請至臨櫃繳款");
+      }
+
+      if (payType == 3) {
+        document.write("轉帳付款，請轉帳至中國信託帳戶，帳號9876543212345");
+      }
+
+      if (payType == 4) {
+        document.write("Line Pay，請傳送金額至@shopping");
+      }
+
+      if (payType == 5) {
+        document.write("貨到付款，請備妥款項交給送貨員");
+      }
+
+      //   防呆措施，如果使用者沒有輸入1-5的值，而是輸入這些以外的值或文字，
+      //   我們需要跳出一個訊息告知使用者。
+
+      //   if (payType > 5) {
+      //     document.write("輸入無效，請輸入1-5的值");
+      //   }
+      //   if (payType < 1) {
+      //     document.write("輸入無效，請輸入1-5的值");
+      //   }
+
+      document.write("<hr>");
+
+      //if 條件的表述是在一個數字範圍裡
+      //js的邏輯運算子
+      // !:not
+      // &&:and
+      // ||:or
+      //邏輯運算子左右兩側的值，一定要是布林值，才能計算。
+
+      if (payType < 1 || payType > 5 || isNaN(payType)) {
+        document.write("輸入無效，請輸入1-5的數字");
+      }
+    </script>
+  </body>
+</html>
